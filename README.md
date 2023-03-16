@@ -1,1 +1,1 @@
-For this project, we expect you to look at this concept: C Programming
+For this project, we are expected  to look at this concept: C Programming
