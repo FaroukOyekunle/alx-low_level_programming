@@ -37,4 +37,9 @@
 
 Prototype: int _abs(int);
 
-8. 7-print_last_digit.c Task:         
+8. 7-print_last_digit.c Task: Write a function that prints the last digit of a number.
+
+* Prototype: int print_last_digit(int);
+* Returns the value of the last digit
+
+9. 8-24_hours.c Task:          
