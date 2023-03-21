@@ -70,4 +70,10 @@ Prototype: int _abs(int);
 * Prototype: void print_times_table(int n);
 * If n is greater than 15 or less than 0 the function should not print anything
 
-14.                  
+14. 101-natural.c Task: If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Write a program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
+
+15. 102-fibonacci.c Task: Write a program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+
+* The numbers must be separated by comma, followed by a space , 
+
+16.                    
