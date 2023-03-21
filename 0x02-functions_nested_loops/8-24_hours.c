@@ -16,12 +16,12 @@ int a, b, c, d;
 {
 	for (d = 48; d <= 57; d++)
 {
-		if (a >= 50 && b >= 52)
-		break;    	
+	if (a >= 50 && b >= 52)
+	break;
 _putchar(a);
 _putchar(b);
 _putchar(58);
-_putchar(c);			
+_putchar(c);
 _putchar(d);
 _putchar('\n');
 }
