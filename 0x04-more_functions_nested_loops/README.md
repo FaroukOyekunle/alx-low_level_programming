@@ -12,4 +12,8 @@
 * Returns 1 if c is a digit
 * Returns 0 otherwise.
 
-3.    
+3. Write a function that multiplies two integers.
+
+* Prototype: int mul(int a, int b);
+
+4.     
