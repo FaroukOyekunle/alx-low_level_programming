@@ -9,7 +9,7 @@ int main(void)
 {
     char *str;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    str = "Love for all hatred for none";
     _puts(str);
     return (0);
 }
