@@ -4,4 +4,8 @@
 
 * Prototype: void reset_to_98(int *n);
 
-2. 
+2. Write a function that swaps the values of two integers.
+
+* Prototype: void swap_int(int *a, int *b); 
+
+3.   
