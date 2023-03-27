@@ -16,4 +16,8 @@
 
 * Prototype: void _puts(char *str);
 
-5.  
+5. 4-print_rev.c Task: Write a function that prints a string, in reverse, followed by a new line.
+
+* Prototype: void print_rev(char *s);
+
+6.    
