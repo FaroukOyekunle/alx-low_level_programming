@@ -1,52 +1,55 @@
-#include "main.h"
+/*
+* File: 101-keygen.c
+*
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * _strcat - function that concatenates two strings
- *
- * Description: function that concatenates two strings
- *
- * @dest: String to place at the start
- * @src: String to place at the end
- *
- * Return: Pointer to concatenated string
- */
-
-char *_strcat(char *dest, char *src)
+* main - Generates random valid passwords for the
+*        program 101-crackme.
+*
+* Return: Always 0.
+*/
+int main(void)
 {
-	int index_src, index_dest, length_src, length_dest, src_end, dest_end;
+char password[84];
+int index = 0, sum = 0, diff_half1, diff_half2;
 
-	src_end = dest_end = length_src = length_dest = 0;
-	index_src = index_dest = 0;
-	while (1)
-	{
-		if (src_end == 1 && dest_end == 1)
-			break;
+srand(time(0));
 
-		if (*(src + index_src) == '\0')
-		{
-			src_end = 1;
-		}
-		else
-		{
-			length_src++;
-			index_src++;
-		}
+while (sum < 2772)
+{
+password[index] = 33 + rand() % 94;
+sum += password[index++];
+}
+password[index] = '\0';
+if (sum != 2772)
+{
+diff_half1 = (sum - 2772) / 2;
+diff_half2 = (sum - 2772) / 2;
+if ((sum - 2772) % 2 != 0)
+diff_half1++;
 
-		if (*(dest + index_dest) == '\0')
-		{
-			dest_end = 1;
-		}
-		else
-		{
-			length_dest++;
-			index_dest++;
-		}
-	}
+for (index = 0; password[index]; index++)
+{
+if (password[index] >= (33 + diff_half1))
+{
+password[index] -= diff_half1;
+break;
+}
+}
+for (index = 0; password[index]; index++)
+{
+if (password[index] >= (33 + diff_half2))
+{
+password[index] -= diff_half2;
+break;
+}
+}
+}
+printf("%s", password);
 
-	for (index_src = 0; index_src < length_src; index_src++)
-	{
-		*(dest + (index_dest + index_src)) = *(src + index_src);
-	}
-
-	return (dest);
+return (0);
 }
