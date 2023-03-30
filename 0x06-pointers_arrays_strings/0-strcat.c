@@ -1,55 +1,25 @@
 /*
-* File: 101-keygen.c
-*
-*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+ * File: 0-strcat.c
+ *
+ */
 
+#include "main.h"
 /**
-* main - Generates random valid passwords for the
-*        program 101-crackme.
-*
-* Return: Always 0.
-*/
-int main(void)
+ *_strcat - Concatenates the string pointed to by @src, including the terminating
+ *          null byte, to the end of the string pointed to by @dest.
+ * @dest: A pointer to the string to be concatenated upon.
+ * @src: The source string to be appended to @dest.
+ *
+ * Return: A pointer to the destination string @dest.
+ */
+char *_strcat(char *dest, const char *src)
 {
-char password[84];
-int index = 0, sum = 0, diff_half1, diff_half2;
+int index = 0, dest_len = 0;
 
-srand(time(0));
+while (dest[index++])
+dest_len++;
+	for (index = 0; src[index]; index++)
+		dest[dest_len++] = src[index];
 
-while (sum < 2772)
-{
-password[index] = 33 + rand() % 94;
-sum += password[index++];
-}
-password[index] = '\0';
-if (sum != 2772)
-{
-diff_half1 = (sum - 2772) / 2;
-diff_half2 = (sum - 2772) / 2;
-if ((sum - 2772) % 2 != 0)
-diff_half1++;
-
-for (index = 0; password[index]; index++)
-{
-if (password[index] >= (33 + diff_half1))
-{
-password[index] -= diff_half1;
-break;
-}
-}
-for (index = 0; password[index]; index++)
-{
-if (password[index] >= (33 + diff_half2))
-{
-password[index] -= diff_half2;
-break;
-}
-}
-}
-printf("%s", password);
-
-return (0);
+	return (dest);
 }
