@@ -1,25 +1,52 @@
-/*
- * File: 0-strcat.c
- *
- */
-
 #include "main.h"
-/**
- *_strcat - Concatenates the string pointed to by @src, including the terminating
- *          null byte, to the end of the string pointed to by @dest.
- * @dest: A pointer to the string to be concatenated upon.
- * @src: The source string to be appended to @dest.
- *
- * Return: A pointer to the destination string @dest.
- */
-char *_strcat(char *dest, const char *src)
-{
-int index = 0, dest_len = 0;
 
-while (dest[index++])
-dest_len++;
-	for (index = 0; src[index]; index++)
-		dest[dest_len++] = src[index];
+/**
+ * _strcat - function that concatenates two strings
+ *
+ * Description: function that concatenates two strings
+ *
+ * @dest: String to place at the start
+ * @src: String to place at the end
+ *
+ * Return: Pointer to concatenated string
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int index_src, index_dest, length_src, length_dest, src_end, dest_end;
+
+	src_end = dest_end = length_src = length_dest = 0;
+	index_src = index_dest = 0;
+	while (1)
+	{
+		if (src_end == 1 && dest_end == 1)
+			break;
+
+		if (*(src + index_src) == '\0')
+		{
+			src_end = 1;
+		}
+		else
+		{
+			length_src++;
+			index_src++;
+		}
+
+		if (*(dest + index_dest) == '\0')
+		{
+			dest_end = 1;
+		}
+		else
+		{
+			length_dest++;
+			index_dest++;
+		}
+	}
+
+	for (index_src = 0; index_src < length_src; index_src++)
+	{
+		*(dest + (index_dest + index_src)) = *(src + index_src);
+	}
 
 	return (dest);
 }
