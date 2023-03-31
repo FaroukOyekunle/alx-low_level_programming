@@ -29,4 +29,8 @@
 * Prototype: void reverse_array(int *a, int n);
 * Where n is the number of elements of the array
 
-6.    
+6. 5-string_toupper.c Task: Write a function that changes all lowercase letters of a string to uppercase.
+
+* Prototype: char *string_toupper(char *);
+
+7.     
