@@ -1,25 +1,17 @@
 #include "main.h"
-
 /**
- * _memset - function that fills memory with a constant byte
- *
- * Description: function that fills memory with a constant byte
- *
- * @s: buffer to overwite
- * @b: constant char to write to buffer
- * @n: number of bytes to overwrite
- *
- * Return: return poiter to start of overwiten buffer
+ * _memset - fills memory with a constant byte,
+ * @s: memory area.
+ * @b: constant byte.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
+	unsigned int i;
 
-	for (index = 0; index < n; index++)
-	{
-		*(s + index) = b;
-	}
+	for (i = 0; i < n; i++)
+		*(s + i) =  b;
 
 	return (s);
 }
