@@ -1,25 +1,17 @@
-i#include "main.h"
-
+#include "main.h"
 /**
- * _memcpy - function that copies memory area
- *
- * Description: function that copies memory area
- *
- * @dest: buffer to overwite
- * @src: buffer to copy
- * @n: number of bytes to overwrite
- *
- * Return: return poiter to start of overwiten buffer
+ * _memcpy - copies memory area,
+ * @dest: destination memory area.
+ * @src: source memory area.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int index;
+	unsigned int i;
 
-	for (index = 0; index < n; index++)
-	{
-		*(dest + index) = *(src + index);
-	}
+	for (i = 0; i < n; i++)
+		*(dest + i) =  *(src + i);
 
 	return (dest);
-
+}
