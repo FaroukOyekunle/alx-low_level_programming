@@ -1,4 +1,11 @@
-                             0x0B. C - malloc, free Task
+   # 0x0B. C - malloc, free Task
+ Project done during **Full Stack Software Engineering studies** at **ALX FSE Training**. It aims to learn about automatic and dynamic allocation in **C Programming**.
+ 
+ 
+ 
+ ## Files
+All of the following files are programs written in C:
+
 
 1. 0-create_array.c Task: Write a function that creates an array of chars, and initializes it with a specific char.
 
