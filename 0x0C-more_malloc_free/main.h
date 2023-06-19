@@ -15,7 +15,7 @@ int find_len(char *str);
 char *create_xarray(int size);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 int len(char *str);
-void *_calloc(unsigned int memb, unsigned int size);
+void *_calloc(unsigned int nmemb, unsigned int size);
 char *iterate_zeroes(char *str);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 

@@ -7,17 +7,17 @@
 *
 *Return: poiner to the address of the memory block
 */
-void *_calloc(unsigned int memb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *block;
 	unsigned int i;
 
-	if (memb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	block = malloc(memb * size);
+	block = malloc(nmemb * size);
 	if (block != NULL)
 	{
-		for (i = 0; i < (memb * size); i++)
+		for (i = 0; i < (nmemb * size); i++)
 			block[i] = 0;
 		return (block);
 	}
