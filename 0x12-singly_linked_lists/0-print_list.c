@@ -19,7 +19,7 @@ if (element->str != NULL)
 printf("[%d] %s\n", element->len, element->str);
 else
 printf("[0] (nil)\n");
-count += 1;
+count++;
 element = element->next;
 }
 
