@@ -1,0 +1,15 @@
+[submodule "0x11-printf"]
+	path = 0x11-printf
+	url = https://github.com/FaroukOyekunle/printf.git
+[submodule "0x16-simple_shell"]
+	path = 0x16-simple_shell
+	url = https://github.com/FaroukOyekunle/simple_shell.git
+[submodule "0x19-stacks_queues_lifo_fifo"]
+	path = 0x19-stacks_queues_lifo_fifo
+	url = https://github.com/FaroukOyekunle/monty.git
+[submodule "0x1B-sorting_algorithms"]
+	path = 0x1B-sorting_algorithms
+	url = https://github.com/FaroukOyekunle/sorting_algorithms.git
+[submodule "0x1D-binary_trees"]
+	path = 0x1D-binary_trees
+	url = https://github.com/FaroukOyekunle/binary_trees.git
