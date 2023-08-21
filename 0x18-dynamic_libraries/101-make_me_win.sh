@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp/ https://raw.github.com/FaroukOyekunle/alx-low_level_programming/master/0x18-dynamic_libraries/101-make_me_win.so
-export LD_PRELOAD =/tmp/101-make_me_win.so
+wget https://raw.githubusercontent.com/FaroukOyekunle/alx-low_level_programming/master/0x18-dynamic_libraries/librand.so -O ../101-make_me_win.so
+export LD_PRELOAD="../101-make_me_win.so"
