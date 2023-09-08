@@ -1,5 +1,5 @@
+
 #include "hash_tables.h"
-#include <string.h>
 
 /**
  * hash_table_get - Retrieve the value associated with
@@ -12,21 +12,19 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-    unsigned long int index;
-    hash_node_t *current_node;
+	hash_node_t *node;
+	unsigned long int index;
 
-    if (ht == NULL || key == NULL || *key == '\0')
-        return (NULL);
+	if (ht == NULL || key == NULL || *key == '\0')
+		return (NULL);
 
-    index = key_index((const unsigned char *)key, ht->size);
-    current_node = ht->array[index];
+	index = key_index((const unsigned char *)key, ht->size);
+	if (index >= ht->size)
+		return (NULL);
 
-    while (current_node)
-    {
-        if (strcmp(current_node->key, key) == 0)
-            return (current_node->value);
-        current_node = current_node->next;
-    }
+	node = ht->array[index];
+	while (node && strcmp(node->key, key) != 0)
+		node = node->next;
 
-    return (NULL); /* Key not found */
+	return ((node == NULL) ? NULL : node->value);
 }
